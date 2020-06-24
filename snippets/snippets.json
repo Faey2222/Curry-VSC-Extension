@@ -1,0 +1,182 @@
+{
+  "importStyledConst": {
+    "prefix": "isc",
+    "body": ["const ${1:ComponentName} = styled.div``;"]
+  },
+  "importStoryBook": {
+    "prefix": "isb",
+    "body": [
+      "import React from 'react';",
+      "import { withKnobs } from '@storybook/addon-knobs';",
+      "import { START_AKTUELL } from '../../../ui/Stories/router';",
+      "import { ${1:${TM_FILENAME_BASE}} } from './';",
+      "",
+      "export default {",
+      "title: 'Project/${1:${TM_FILENAME_BASE}}',",
+      "decorators: [START_AKTUELL, withKnobs],",
+      "",
+      "parameters: {",
+      "component: ${1:${TM_FILENAME_BASE}},",
+      "},",
+      "};",
+      "",
+      "export const _${1:${TM_FILENAME_BASE}} = () => {",
+      "return <${1:${TM_FILENAME_BASE}} />;",
+      "};",
+      "",
+      "_${1:${TM_FILENAME_BASE}}.story = {",
+      "name: '${1:${TM_FILENAME_BASE}}',",
+      "};"
+    ]
+  },
+  "importReactEmotionFunctionComponent": {
+    "prefix": "irefc",
+    "body": [
+      "import * as React from 'react';",
+      "import { styled } from '@emotion/react';",
+      "",
+      "interface I${1:ComponentName}Props {",
+      "}",
+      "",
+      "const Styled${1:ComponentName} = styled.div``;",
+      "",
+      "export const ${1:ComponentName}: React.FunctionComponent<I${1:ComponentName}Props> = (props) => {",
+      "return <Styled${1:ComponentName}>ComponentName: ${1:ComponentName}</Styled${1:ComponentName}>;",
+      "};"
+    ]
+  },
+  "importReactFunctionComponent": {
+    "prefix": "irfc",
+    "body": [
+      "import * as React from 'react';",
+      "",
+      "interface I${1:ComponentName}Props {",
+      "}",
+      "",
+      "export const ${1:ComponentName}: React.FunctionComponent<I${1:ComponentName}Props> = (props) => {",
+      "return <div>ComponentName: ${1:ComponentName}</div>;",
+      "};"
+    ]
+  },
+  "import": {
+    "prefix": "irrc",
+    "body": [
+      "namespace \\$RYVE.FrontOffice.Components {",
+      "  @Riot.Options({",
+      "    tag: '${1:${TM_FILENAME_BASE}}',",
+      "    templateName: '${1:${TM_FILENAME_BASE}}'",
+      "  })",
+      "",
+      "  export class YourComponent extends Component {",
+      "",
+      "    onMount() {",
+      "",
+      "    }",
+      "",
+      "    onUnmount() {",
+      "",
+      "    }",
+      "",
+      "  }",
+      "}"
+    ]
+  },
+  "importNoModuleName": {
+    "prefix": "irrw",
+    "body": [
+      "namespace \\$RYVE.FrontOffice.Widgets {",
+      "  @Riot.WidgetOptions({",
+      "    tag: '${1:${TM_FILENAME_BASE}}',",
+      "    templateName: '${1:${TM_FILENAME_BASE}}',",
+      "    type: 'your-guid-here'",
+      "  })",
+      "",
+      "  export class YourWidget extends Riot.Widget.Base {",
+      "",
+      "    onRegistered() {",
+      "        this.afterContentReady();",
+      "    }",
+      "",
+      "    onUnmount() {",
+      "",
+      "    }",
+      "",
+      "  }",
+      "}"
+    ]
+  },
+  "importDestructing": {
+    "prefix": "ivt",
+    "body": ["<virtual if=\"{ ${1:object} }\">", "", "</virtual>"]
+  },
+  "consoleAssert": {
+    "prefix": "cas",
+    "body": "console.assert(${1:expression}, ${2:object})",
+    "description": "If the specified expression is false, the message is written to the console along with a stack trace"
+  },
+  "consoleClear": {
+    "prefix": "ccl",
+    "body": "console.clear()",
+    "description": "Clears the console"
+  },
+  "consoleCount": {
+    "prefix": "cco",
+    "body": "console.count(${1:label})",
+    "description": "Writes the the number of times that count() has been invoked at the same line and with the same label"
+  },
+  "consoleDir": {
+    "prefix": "cdi",
+    "body": "console.dir(${1:object})",
+    "description": "Prints a JavaScript representation of the specified object"
+  },
+  "consoleError": {
+    "prefix": "cer",
+    "body": "console.error(${1:object})",
+    "description": "Displays a message in the console and also includes a stack trace from where the method was called"
+  },
+  "consoleGroup": {
+    "prefix": "cgr",
+    "body": "console.group(\"${1:label}\")",
+    "description": "Groups and indents all following output by an additional level, until console.groupEnd() is called."
+  },
+  "consoleGroupEnd": {
+    "prefix": "cge",
+    "body": "console.groupEnd()",
+    "description": "Closes out the corresponding console.group()."
+  },
+  "consoleLog": {
+    "prefix": "clg",
+    "body": "console.log(${1:object})",
+    "description": "Displays a message in the console"
+  },
+  "consoleTrace": {
+    "prefix": "ctr",
+    "body": "console.trace(${1:object})",
+    "description": "Prints a stack trace from the point where the method was called"
+  },
+  "consoleLogObject": {
+    "prefix": "clo",
+    "body": "console.log('${1:object}', ${1:object})",
+    "description": "Logs property with name."
+  },
+  "consoleTime": {
+    "prefix": "ctm",
+    "body": "console.time('${1:object}')",
+    "description": "Console time wrapper"
+  },
+  "consoleTimeEnd": {
+    "prefix": "cte",
+    "body": "console.timeEnd('${1:object}')",
+    "description": "Console time end wrapper"
+  },
+  "consoleWarn": {
+    "prefix": "cwa",
+    "body": "console.warn(${1:object})",
+    "description": "Displays a message in the console but also displays a yellow warning icon along with the logged message"
+  },
+  "consoleInfo": {
+    "prefix": "cin",
+    "body": "console.info(${1:object})",
+    "description": "Displays a message in the console but also displays a blue information icon along with the logged message"
+  }
+}
