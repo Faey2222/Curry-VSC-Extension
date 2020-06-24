@@ -2,7 +2,7 @@
   "name": "rr-vsc-extension",
   "displayName": "Curry VSC DevTools",
   "description": "Curry VSC DevTools",
-  "version": "1.0.6",
+  "version": "1.0.8",
   "publisher": "faey",
   "repository": {
     "type": "git",
@@ -79,9 +79,9 @@
     "test": "yarn run compile && node ./node_modules/vscode/bin/test"
   },
   "devDependencies": {
-    "typescript": "3.4.2",
-    "vscode": "1.1.33",
+    "@types/node": "11.13.0",
     "tslint": "5.15.0",
-    "@types/node": "11.13.0"
+    "typescript": "3.4.2",
+    "vscode": "1.1.33"
   }
 }
