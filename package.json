@@ -4,6 +4,10 @@
   "description": "Curry VSC DevTools",
   "version": "1.0.6",
   "publisher": "faey",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Faey2222/Curry-VSC-Extension"
+  },
   "icon": "images/logo.png",
   "keywords": [
     "snippets",
@@ -22,7 +26,9 @@
   "categories": [
     "Snippets"
   ],
-  "extensionKind": "ui",
+  "extensionKind": [
+    "ui"
+  ],
   "main": "./out/index.js",
   "activationEvents": [
     "onCommand:extension.snippetSearch"
