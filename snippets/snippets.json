@@ -7,6 +7,33 @@
     "prefix": "isb",
     "body": [
       "import React from 'react';",
+      "import { ${1:${TM_FILENAME/\\.stories\\.tsx$|(^|[-.])([^-.]+)/${1:+_}${2:/_}/g}} } from '.';",
+      "",
+      "export default {",
+      "title: '${1:${TM_FILENAME}}',",
+      "component: ${1:${TM_FILENAME}},",
+      "argTypes: {",
+      "children: { control: 'text' },",
+      "size: {",
+      "control: {",
+      "type: 'select',",
+      "options: ['small', 'medium', 'large', 'larger'],",
+      "},",
+      "},",
+      "},",
+      "};",
+      "",
+      "const Template = (args) => <${1:${TM_FILENAME}} {...args} />;",
+      "",
+      "export const Default = Template.bind({});",
+      "Default.args = {",
+      "};"
+    ]
+  },
+  "importStoryBookOld": {
+    "prefix": "isbo",
+    "body": [
+      "import React from 'react';",
       "import { withKnobs } from '@storybook/addon-knobs';",
       "import { START_AKTUELL } from '../../../ui/Stories/router';",
       "import { ${1:${TM_FILENAME/\\.stories\\.tsx$|(^|[-.])([^-.]+)/${1:+_}${2:/_}/g}} } from './';",
